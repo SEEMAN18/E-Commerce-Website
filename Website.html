@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cozy Bean - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">The Cozy Bean ☕</div>
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Product Items</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About Us</a>
+        </nav>
+        <div class="user-actions">
+            <button id="login-btn">Login / Register</button>
+            <a href="account.html" class="cart-icon">🛒</a>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <h1>Discover Your Perfect Brew</h1>
+        <p>Premium, ethically sourced coffee beans delivered to your door.</p>
+        <a href="shop.html" class="cta-button">Shop Now</a>
+    </section>
+
+    <section class="featured-products">
+        <h2>Featured Roasts</h2>
+        <div class="product-row">
+            <div class="product-card">
+                [attachment_0](attachment)
+                <h3>Ethiopian Light Roast</h3>
+                <p>$18.99</p>
+                <button class="add-to-cart">Buy Now</button>
+            </div>
+            <div class="product-card">
+                [attachment_1](attachment)
+                <h3>Signature Espresso Blend</h3>
+                <p>$16.50</p>
+                <button class="add-to-cart">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="form-tabs">
+                <button class="tab-button active" onclick="showForm('login-form-container', this)">Login</button>
+                <button class="tab-button" onclick="showForm('register-form-container', this)">Register</button>
+            </div>
+
+            <div id="login-form-container" class="form-container">
+                <h3 class="form-title">Welcome Back!</h3>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" required placeholder="name@example.com">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required placeholder="••••••••">
+                        <span class="error-message"></span>
+                    </div>
+                    <button type="submit" class="submit-button">Sign In</button>
+                </form>
+            </div>
+
+            <div id="register-form-container" class="form-container" style="display: none;">
+                <h3 class="form-title">Join The Club!</h3>
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="reg-fullname">Full Name</label>
+                        <input type="text" id="reg-fullname" required placeholder="John Doe">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email Address</label>
+                        <input type="email" id="reg-email" required placeholder="your.email@example.com">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" required placeholder="Min 8 chars, 1 capital, 1 symbol">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm-password">Confirm Password</label>
+                        <input type="password" id="reg-confirm-password" required placeholder="Re-enter password">
+                        <span class="error-message"></span>
+                    </div>
+                    <button type="submit" class="submit-button">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer><p>&copy; 2025 The Cozy Bean Coffee Co.</p></footer>
+    <script src="Script.js"></script>
+</body>
+</html>

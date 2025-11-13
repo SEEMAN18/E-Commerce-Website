@@ -1,0 +1,185 @@
+/* Color Palette & Typography */
+:root {
+    --espresso: #4B3731; /* Deep Brown */
+    --latte: #F5F5DC;    /* Cream/Beige */
+    --gold: #C9B037;     /* Highlight */
+    --earth-green: #798777; /* Accent for CTAs */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--espresso);
+    background-color: var(--latte);
+    margin: 0;
+    padding-top: 60px; /* Space for fixed header */
+}
+
+/* Feature 1: Header and Navigation */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(75, 55, 49, 0.95);
+    color: var(--latte);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#main-nav a, .user-actions button {
+    color: var(--latte);
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: color 0.3s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1em;
+}
+#main-nav a:hover, .user-actions button:hover {
+    color: var(--gold);
+}
+.cart-icon {
+    font-size: 1.4em;
+    padding-left: 10px;
+}
+
+/* Hero Section (Attractive) */
+.hero-section {
+    /* Replace with actual image in your project folder */
+    background: url('hero-coffee.jpg') no-repeat center center/cover; 
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 30px;
+}
+.hero-section h1 {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.cta-button {
+    background-color: var(--earth-green);
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+.cta-button:hover {
+    background-color: #5d685c;
+}
+
+/* Feature 2: Modal and Form Styling */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6); 
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.form-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+.tab-button {
+    flex-grow: 1;
+    padding: 12px 0;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1.1em;
+    color: var(--espresso);
+    border-bottom: 3px solid transparent;
+}
+.tab-button.active {
+    color: var(--earth-green);
+    border-bottom: 3px solid var(--earth-green);
+    font-weight: bold;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.form-group input.invalid {
+    border-color: red !important; /* Validation error */
+}
+.error-message {
+    color: red;
+    font-size: 0.85em;
+    display: none;
+    margin-bottom: 10px;
+}
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--espresso);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+}
+.submit-button:hover {
+    background-color: #6a4f4b;
+}
+
+/* Basic Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--espresso);
+    color: var(--latte);
+    margin-top: 50px;
+}
